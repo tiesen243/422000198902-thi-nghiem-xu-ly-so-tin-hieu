@@ -1,9 +1,9 @@
 function [y, n] = cong_2_tin_hieu(x1, n1, x2, n2)
-%cong_2_tin_hieu - Description
-%
-% Syntax: [y,n] = cong_2_tin_hieu(x1,n1,x2,n2)
-%
-% Long description
+    % cong_2_tin_hieu - Description
+    %
+    % Syntax: [y,n] = cong_2_tin_hieu(x1,n1,x2,n2)
+    %
+    % Long description
     n = min(min(n1), min(n2)):max(max(n1), max(n2));
     y1 = zeros(1, length(n));
     y2 = y1;
@@ -11,3 +11,4 @@ function [y, n] = cong_2_tin_hieu(x1, n1, x2, n2)
     y2(find((n >= min(n2)) & (n <= max(n2)) == 1)) = x2;
     y = y1 + y2;
 end
+

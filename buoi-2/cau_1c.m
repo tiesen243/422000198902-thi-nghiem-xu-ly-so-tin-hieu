@@ -9,9 +9,9 @@
 [x3, n3] = ham_bac(10, -5, 20);
 [x4, n4] = ham_bac(15, -5, 20);
 
-[y, n] = cong_2_tin_hieu(10*x1, n1, -5*x2, n2);
-[y, n] = cong_2_tin_hieu(y, n, -10*x3, n3);
-[x, n] = cong_2_tin_hieu(y, n, 5*x4, n4);
+[y, n] = cong_2_tin_hieu(10 * x1, n1, -5 * x2, n2);
+[y, n] = cong_2_tin_hieu(y, n, -10 * x3, n3);
+[x, n] = cong_2_tin_hieu(y, n, 5 * x4, n4);
 
 stem(n, x, 'filled');
 grid on;
