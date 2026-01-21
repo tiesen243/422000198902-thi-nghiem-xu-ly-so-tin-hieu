@@ -2,23 +2,20 @@ clc;
 clear all;
 close all;
 
-ws1 = 0.3 * pi;
-wp1 = 0.35 * pi;
-wp2 = 0.6 * pi;
-ws2 = 0.7 * pi;
+ws = 0.4 * pi;
+wp = 0.5 * pi;
 As = 50;
-Rp = 0.2;
+Rp = 0.0004;
 
-transition = min(wp1 - ws1, ws2 - wp2);
-M_order = ceil(6.6 * pi / transition) + 1;
+transition = wp - ws;
+M_order = ceil((As - 7.95) / (2.285 * transition) + 1) + 1;
 n_sequnce = [0:1:M_order - 1];
 
-wc1 = (ws1 + wp1) / 2;
-wc2 = (ws2 + wp2) / 2;
-
-h_ideal = ideal_lp(wc2, M_order) - ideal_lp(wc1, M_order);
-w_ham = hamming(M_order)';
-h_actual = h_ideal .* w_ham;
+wc = (ws + wp) / 2;
+h_ideal = ideal_lp(wc, M_order);
+beta = 0.1102 * (As - 8.7);
+w_kai = kaiser(M_order, beta)';
+h_actual = h_ideal .* w_kai;
 
 [db, mag, pha, grd, w] = freqz_m(h_actual, [1]);
 delta_w = 2 * pi / 1000;
@@ -31,8 +28,8 @@ ylabel('hd(n)');
 axis([0 M_order -0.4 0.5]);
 
 subplot(2, 2, 2);
-stem(n_sequnce, w_ham, 'b');
-title('Hamming Window');
+stem(n_sequnce, w_kai, 'b');
+title('Kaiser Window');
 xlabel('n');
 ylabel('w(n)');
 axis([0 M_order 0 1.1]);

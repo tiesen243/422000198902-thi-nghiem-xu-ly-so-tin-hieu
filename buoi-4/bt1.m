@@ -24,9 +24,6 @@ h_actual = h_ideal .* w_hann;
 [db, mag, pha, grd, w] = freqz_m(h_actual, [1]);
 delta_w = 2 * pi / 1000;
 
-ripple_pass = -(min(db(wp1 / delta_w + 1:1:wp2 / delta_w)));
-attenuation_stop = -round(max(db(ws2 / delta_w + 1:1:501)));
-
 subplot(2, 2, 1);
 stem(n_sequnce, h_ideal, 'b');
 title('Ideal Impulse Response');

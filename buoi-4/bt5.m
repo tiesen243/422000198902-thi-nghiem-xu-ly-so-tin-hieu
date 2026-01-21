@@ -2,21 +2,21 @@ clc;
 clear all;
 close all;
 
-ws1 = 0.3 * pi;
-wp1 = 0.35 * pi;
-wp2 = 0.6 * pi;
-ws2 = 0.7 * pi;
+ws1 = 0.4 * pi;
+wp1 = 0.3 * pi;
+wp2 = 0.7 * pi;
+ws2 = 0.6 * pi;
 As = 50;
 Rp = 0.2;
 
-transition = min(wp1 - ws1, ws2 - wp2);
+transition = min(abs(wp1 - ws1), abs(ws2 - wp2));
 M_order = ceil(6.6 * pi / transition) + 1;
 n_sequnce = [0:1:M_order - 1];
 
 wc1 = (ws1 + wp1) / 2;
 wc2 = (ws2 + wp2) / 2;
 
-h_ideal = ideal_lp(wc2, M_order) - ideal_lp(wc1, M_order);
+h_ideal = ideal_lp(wc1, M_order) - ideal_lp(wc2, M_order);
 w_ham = hamming(M_order)';
 h_actual = h_ideal .* w_ham;
 
