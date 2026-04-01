@@ -1,0 +1,9 @@
+#define NUM_SECTIONS 1
+float b[NUM_SECTIONS][1]={ { 0.123841456964513 } };
+float a[NUM_SECTIONS][4]={ {1 ,0.996900957763719 , 0.496905759795110, 0.123841456964513} };
+// thiet ke tu matlab dang cascaded Direct Form II
+/*
+/Wp = 0.2*pi; Ws = 0.3*pi; Rp = 7; As = 16;
+//Ripple = 10 ^ (-Rp/20); Attn = 10 ^ (-As/20); 
+ //[b,a] = afd_butt(Wp,Ws,Rp,As);
+*/

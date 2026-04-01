@@ -1,0 +1,171 @@
+#include "dsk6416_aic23.h"
+#include <math.h>
+
+#define M 24
+#define BUFFSIZE 128
+
+Uint32 fs = DSK6416_AIC23_FREQ_48KHZ;
+
+short loop = 0;
+short i = 0, k = 0;
+short gain = 1;
+
+short gBuffer[BUFFSIZE];
+short gBuffer_2[BUFFSIZE][5];
+
+short sine_table[M], cosine_table[M];
+short square_wave_table[8] = {1000, 1000, 1000, 1000, -1000, -1000, -1000, -1000};
+short three_angle_table[8] = {0, 250, 500, 750, 1000, 750, 500, 250};
+short sin_table_sum[BUFFSIZE];
+
+void lab_8_1();
+void lab_8_2();
+void lab_8_3();
+
+void ex_8_1();
+void ex_8_2();
+void ex_8_3();
+void ex_8_4();
+void ex_8_5();
+
+void main()
+{
+   // lab_8_1();
+   // lab_8_2();
+   lab_8_3();
+}
+
+void lab_8_1()
+{
+
+   c6416_dsk_init();
+
+   DSK6416_LED_init();
+   DSK6416_DIP_init();
+
+   for (i = 0; i < M; i++)
+      sine_table[i] = 1000 * sin(3.14 * 2 * i / M);
+
+   while (1)
+      for (i = 0; i < BUFFSIZE; i++)
+      {
+         if (DSK6416_DIP_get(0) == 0)
+         {
+            DSK6416_LED_on(0);
+            for (loop = 0; loop < M; loop++)
+            {
+               output_sample(sine_table[loop] * gain);
+               gBuffer[i + loop] = (sine_table[loop] * gain);
+            }
+            if (loop == M)
+               i = i + loop - 1, loop = 0;
+         }
+         else
+            DSK6416_LED_off(0);
+      }
+}
+
+void lab_8_2()
+{
+
+   fs = DSK6416_AIC23_FREQ_8KHZ;
+   gain = 2;
+
+   c6416_dsk_init();
+
+   DSK6416_LED_init();
+   DSK6416_DIP_init();
+
+   while (1)
+   {
+      for (i = 0; i < BUFFSIZE; i++)
+      {
+         if (DSK6416_DIP_get(0) == 0)
+         {
+            DSK6416_LED_on(0);
+
+            for (loop = 0; loop < 8; loop++)
+            {
+               output_sample(square_wave_table[loop] * gain);
+               gBuffer[i + loop] = (square_wave_table[loop] * gain);
+            }
+
+            if (loop == 8)
+               i = i + loop - 1, loop = 0;
+         }
+         else if (DSK6416_DIP_get(1) == 0)
+         {
+            DSK6416_LED_on(1);
+
+            for (loop = 0; loop < 8; loop++)
+            {
+               output_sample(three_angle_table[loop] * gain);
+               gBuffer[i + loop] = (three_angle_table[loop] * gain);
+            }
+            if (loop == 8)
+               i = i + loop - 1, loop = 0;
+         }
+         else
+         {
+            DSK6416_LED_off(0);
+            DSK6416_LED_off(1);
+         }
+      }
+   }
+}
+
+void lab_8_3()
+{
+
+   fs = DSK6416_AIC23_FREQ_8KHZ;
+   gain = 2;
+
+   c6416_dsk_init();
+
+   DSK6416_LED_init();
+   DSK6416_DIP_init();
+
+   for (k = 1; k < 10; k += 2)
+   {
+      for (i = 0; i < BUFFSIZE; i++)
+         gBuffer_2[i][k / 2] = 1000 * (1.0 / k) * sin(3.14 * 2 * i / BUFFSIZE);
+
+      for (i = 0; i < BUFFSIZE; i++)
+      {
+         sin_table_sum[i] = 0;
+
+         for (k = 1; k < 10; k += 2)
+            sin_table_sum[i] += gBuffer_2[i][k / 2];
+      }
+   }
+
+   while (1)
+   {
+      if (DSK6416_DIP_get(0) == 0)
+      {
+         DSK6416_LED_on(0);
+         output_sample(sin_table_sum[i] * gain);
+      }
+      else
+         DSK6416_LED_off(0);
+   }
+}
+
+void ex_8_1()
+{
+   fs = DSK6416_AIC23_FREQ_16KHZ;
+
+   c6416_dsk_init();
+
+   while (1)
+   {
+      for (i = 0; i < BUFFSIZE; i++)
+      {
+         for (loop = 0; loop < M; loop++)
+         {
+            output_sample(cosine_table[loop] * gain);
+            gBuffer[i + loop] = (cosine_table[loop] * gain);
+         }
+      }
+   }
+}

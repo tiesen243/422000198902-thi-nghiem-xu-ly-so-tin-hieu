@@ -1,0 +1,350 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.20                     
+******************************************************************************
+>> Linked Wed Mar 11 09:25:44 2026
+
+OUTPUT FILE NAME:   <lab_5.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00002080
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  RAM                   00000001   fffffffe  00003754  ffffc8aa  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.pinit     0    00000004    00000000     UNINITIALIZED
+
+.data      0    00000008    00000000     UNINITIALIZED
+
+.bss       0    00000008    00000000     UNINITIALIZED
+
+.text      0    00000020    000022c0     
+                  00000020    00000640     c6416dskinit.obj (.text)
+                  00000660    000003e0     Fir.obj (.text:retain)
+                  00000a40    000003c0     dsk6416bsl.lib : dsk6416.obj (.text)
+                  00000e00    00000220                    : dsk6416_aic23_opencodec.obj (.text)
+                  00001020    00000220                    : dsk6416_aic23_registers.obj (.text)
+                  00001240    000001e0     csl6416.lib : csl_irq.obj (.text:_IRQ_map)
+                  00001420    000001e0                 : csl_mcbsp.obj (.text:_MCBSP_reset)
+                  00001600    00000100     dsk6416bsl.lib : dsk6416_aic23_setfreq.obj (.text)
+                  00001700    000000e0     csl6416.lib : csl_mcbsp.obj (.text:_MCBSP_open)
+                  000017e0    000000e0                 : csl_mcbsp.obj (.text:_MCBSP_start)
+                  000018c0    000000e0     rts6400.lib : autoinit.obj (.text:__auto_init)
+                  000019a0    000000e0                 : memcpy64.obj (.text:_memcpy)
+                  00001a80    000000c0     csl6416.lib : csl_mcbsp.obj (.text:_MCBSP_config)
+                  00001b40    000000c0     rts6400.lib : strasg.obj (.text:__strasg)
+                  00001c00    000000c0                 : exit.obj (.text:_exit)
+                  00001cc0    000000c0     csl6416.lib : csl_irq.obj (.text:_setMux)
+                  00001d80    000000a0     Fir.obj (.text)
+                  00001e20    000000a0     csl6416.lib : csl_emifa.obj (.text:_EMIFA_config)
+                  00001ec0    000000a0                 : csl_emifb.obj (.text:_EMIFB_config)
+                  00001f60    000000a0     rts6400.lib : cpy_tbl.obj (.text:_copy_in)
+                  00002000    00000080                 : cpp_init.obj (.text:___TI_cpp_init)
+                  00002080    00000060                 : boot.obj (.text:_c_int00)
+                  000020e0    00000040     csl6416.lib : csl_irq.obj (.text:_IRQ_reset)
+                  00002120    00000040     rts6400.lib : args_main.obj (.text:__args_main)
+                  00002160    00000020     Vectors_intr.obj (.text)
+                  00002180    00000020     csl6416.lib : csl_irq.obj (.text:_IRQ_enable)
+                  000021a0    00000020                 : csl_irq.obj (.text:_IRQ_globalDisable)
+                  000021c0    00000020                 : csl_irq.obj (.text:_IRQ_globalEnable)
+                  000021e0    00000020                 : csl_irq.obj (.text:_IRQ_nmiEnable)
+                  00002200    00000020                 : csl_mcbsp.obj (.text:_MCBSP_getXmtEventId)
+                  00002220    00000020                 : csl_mcbsp.obj (.text:_MCBSP_read)
+                  00002240    00000020                 : csl_mcbsp.obj (.text:_MCBSP_rrdy)
+                  00002260    00000020                 : csl_mcbsp.obj (.text:_MCBSP_write)
+                  00002280    00000020                 : csl_mcbsp.obj (.text:_MCBSP_xrdy)
+                  000022a0    00000020     rts6400.lib : exit.obj (.text:_abort)
+                  000022c0    00000020     csl6416.lib : csl_irq.obj (.text)
+
+.far       0    000022e0    000008a0     UNINITIALIZED
+                  000022e0    000006a0     Fir.obj (.far)
+                  00002980    00000100     csl6416.lib : csl_irq.obj (.far)
+                  00002a80    0000005a     c6416dskinit.obj (.far)
+                  00002ada    00000004     dsk6416bsl.lib : dsk6416.obj (.far)
+                  00002ade    00000002     --HOLE--
+                  00002ae0    00000054     csl6416.lib : csl_mcbsp.obj (.far)
+                  00002b34    00000004     --HOLE--
+                  00002b38    00000020     dsk6416bsl.lib : dsk6416_aic23_setfreq.obj (.far)
+                  00002b58    00000014                    : dsk6416_aic23_registers.obj (.far)
+                  00002b6c    0000000c     rts6400.lib : exit.obj (.far)
+                  00002b78    00000008     dsk6416bsl.lib : dsk6416_aic23_opencodec.obj (.far)
+
+.cinit     0    00002b80    000004c4     
+                  00002b80    00000234     Fir.obj (.cinit)
+                  00002db4    00000004     --HOLE-- [fill = 0]
+                  00002db8    0000012c     csl6416.lib : csl_irq.obj (.cinit)
+                  00002ee4    00000004     --HOLE-- [fill = 0]
+                  00002ee8    0000007c                 : csl_mcbsp.obj (.cinit)
+                  00002f64    00000004     --HOLE-- [fill = 0]
+                  00002f68    0000005c     c6416dskinit.obj (.cinit)
+                  00002fc4    00000004     --HOLE-- [fill = 0]
+                  00002fc8    0000002c     rts6400.lib : exit.obj (.cinit)
+                  00002ff4    00000004     --HOLE-- [fill = 0]
+                  00002ff8    00000028     dsk6416bsl.lib : dsk6416_aic23_setfreq.obj (.cinit)
+                  00003020    0000001c                    : dsk6416_aic23_registers.obj (.cinit)
+                  0000303c    00000004     --HOLE-- [fill = 0]
+                  00003040    00000004     (.pad.cinit) [fill = 0]
+
+.stack     0    00003048    00000400     UNINITIALIZED
+                  00003048    00000008     rts6400.lib : boot.obj (.stack)
+                  00003050    000003f8     --HOLE--
+
+.const     0    00003448    00000130     
+                  00003448    000000c0     dsk6416bsl.lib : dsk6416.obj (.const)
+                  00003508    00000070                    : dsk6416_aic23_opencodec.obj (.const)
+
+.vecs      0    00003800    00000200     
+                  00003800    00000200     Vectors_intr.obj (.vecs)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00000008   $bss
+00000008   .bss
+00000008   .data
+00000020   .text
+000022a0   C$$EXIT
+00002a8c   _AIC23CfgData
+00002a80   _AIC_data
+00002b78   _DSK6416_AIC23_codeccontrolhandle
+00002b7c   _DSK6416_AIC23_codecdatahandle
+0000117c   _DSK6416_AIC23_config
+00000e00   _DSK6416_AIC23_openCodec
+0000113c   _DSK6416_AIC23_rget
+00001020   _DSK6416_AIC23_rset
+00001600   _DSK6416_AIC23_setFreq
+00000d2c   _DSK6416_getVersion
+00000a40   _DSK6416_init
+00000bf0   _DSK6416_rget
+00000c28   _DSK6416_rset
+00002ada   _DSK6416_version
+00000c70   _DSK6416_wait
+00000ce0   _DSK6416_waitusec
+00001e20   _EMIFA_config
+00001ec0   _EMIFB_config
+00002180   _IRQ_enable
+000021a0   _IRQ_globalDisable
+000021c0   _IRQ_globalEnable
+00001240   _IRQ_map
+000021e0   _IRQ_nmiEnable
+000020e0   _IRQ_reset
+00001a80   _MCBSP_config
+00002200   _MCBSP_getXmtEventId
+00001700   _MCBSP_open
+00002220   _MCBSP_read
+00001420   _MCBSP_reset
+00002240   _MCBSP_rrdy
+000017e0   _MCBSP_start
+00002260   _MCBSP_write
+00002280   _MCBSP_xrdy
+00002a78   __IRQ_dispatchTable
+000029b0   __IRQ_eventTable
+000022c0   __IRQ_hookFetchPacket
+00002a38   __IRQ_intTable
+00002b28   __MCBSP_hDev0
+00002b2c   __MCBSP_hDev1
+00002b30   __MCBSP_hDev2
+00003448   __STACK_END
+00000400   __STACK_SIZE
+00000001   __TI_args_main
+00002000   ___TI_cpp_init
+00002b74   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00000008   ___bss__
+ffffffff   ___c_args__
+00002b80   ___cinit__
+00000008   ___data__
+00000008   ___edata__
+00000008   ___end__
+000022e0   ___etext__
+ffffffff   ___pinit__
+00000020   ___text__
+00002120   __args_main
+000018c0   __auto_init
+00002b6c   __cleanup_ptr
+00002b70   __dtors_ptr
+00003048   __stack
+00001b40   __strasg
+000022a0   _abort
+00000020   _c6416_dsk_init
+00002080   _c_int00
+00000660   _c_int11
+000000ec   _comm_intr
+000000c4   _comm_poll
+00002ac4   _config
+00001f60   _copy_in
+000024f0   _dly
+00001c00   _exit
+000024e0   _fs
+000024ec   _gain
+000026f0   _gbuffer
+000022e0   _h
+00002880   _h1
+00002ad8   _hAIC23_handle
+000024e8   _i
+00000508   _input_left_sample
+000005a8   _input_right_sample
+00000430   _input_sample
+00001d80   _main
+000019a0   _memcpy
+000002c4   _output_left_sample
+0000037c   _output_right_sample
+000001d8   _output_sample
+00003820   _vector1
+00003940   _vector10
+00003980   _vector12
+000039a0   _vector13
+000039c0   _vector14
+000039e0   _vector15
+00003840   _vector2
+00003860   _vector3
+00003880   _vector4
+000038a0   _vector5
+000038c0   _vector6
+000038e0   _vector7
+00003900   _vector8
+00003920   _vector9
+00003800   _vectors
+000024e4   _yn
+ffffffff   binit
+00002b80   cinit
+00000008   edata
+00000008   end
+000022e0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000008   $bss
+00000008   .bss
+00000008   .data
+00000008   ___bss__
+00000008   ___data__
+00000008   ___edata__
+00000008   ___end__
+00000008   edata
+00000008   end
+00000020   .text
+00000020   ___text__
+00000020   _c6416_dsk_init
+000000c4   _comm_poll
+000000ec   _comm_intr
+000001d8   _output_sample
+000002c4   _output_left_sample
+0000037c   _output_right_sample
+00000400   __STACK_SIZE
+00000430   _input_sample
+00000508   _input_left_sample
+000005a8   _input_right_sample
+00000660   _c_int11
+00000a40   _DSK6416_init
+00000bf0   _DSK6416_rget
+00000c28   _DSK6416_rset
+00000c70   _DSK6416_wait
+00000ce0   _DSK6416_waitusec
+00000d2c   _DSK6416_getVersion
+00000e00   _DSK6416_AIC23_openCodec
+00001020   _DSK6416_AIC23_rset
+0000113c   _DSK6416_AIC23_rget
+0000117c   _DSK6416_AIC23_config
+00001240   _IRQ_map
+00001420   _MCBSP_reset
+00001600   _DSK6416_AIC23_setFreq
+00001700   _MCBSP_open
+000017e0   _MCBSP_start
+000018c0   __auto_init
+000019a0   _memcpy
+00001a80   _MCBSP_config
+00001b40   __strasg
+00001c00   _exit
+00001d80   _main
+00001e20   _EMIFA_config
+00001ec0   _EMIFB_config
+00001f60   _copy_in
+00002000   ___TI_cpp_init
+00002080   _c_int00
+000020e0   _IRQ_reset
+00002120   __args_main
+00002180   _IRQ_enable
+000021a0   _IRQ_globalDisable
+000021c0   _IRQ_globalEnable
+000021e0   _IRQ_nmiEnable
+00002200   _MCBSP_getXmtEventId
+00002220   _MCBSP_read
+00002240   _MCBSP_rrdy
+00002260   _MCBSP_write
+00002280   _MCBSP_xrdy
+000022a0   C$$EXIT
+000022a0   _abort
+000022c0   __IRQ_hookFetchPacket
+000022e0   ___etext__
+000022e0   _h
+000022e0   etext
+000024e0   _fs
+000024e4   _yn
+000024e8   _i
+000024ec   _gain
+000024f0   _dly
+000026f0   _gbuffer
+00002880   _h1
+000029b0   __IRQ_eventTable
+00002a38   __IRQ_intTable
+00002a78   __IRQ_dispatchTable
+00002a80   _AIC_data
+00002a8c   _AIC23CfgData
+00002ac4   _config
+00002ad8   _hAIC23_handle
+00002ada   _DSK6416_version
+00002b28   __MCBSP_hDev0
+00002b2c   __MCBSP_hDev1
+00002b30   __MCBSP_hDev2
+00002b6c   __cleanup_ptr
+00002b70   __dtors_ptr
+00002b74   ___TI_enable_exit_profile_output
+00002b78   _DSK6416_AIC23_codeccontrolhandle
+00002b7c   _DSK6416_AIC23_codecdatahandle
+00002b80   ___cinit__
+00002b80   cinit
+00003048   __stack
+00003448   __STACK_END
+00003800   _vectors
+00003820   _vector1
+00003840   _vector2
+00003860   _vector3
+00003880   _vector4
+000038a0   _vector5
+000038c0   _vector6
+000038e0   _vector7
+00003900   _vector8
+00003920   _vector9
+00003940   _vector10
+00003980   _vector12
+000039a0   _vector13
+000039c0   _vector14
+000039e0   _vector15
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[116 symbols]

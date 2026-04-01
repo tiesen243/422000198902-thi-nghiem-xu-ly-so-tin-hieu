@@ -1,0 +1,54 @@
+
+**** Build of configuration Debug for project lab_2 ****
+
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
+'Building file: ../Sine8_LED.c'
+'Invoking: C6000 Compiler'
+"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far --preproc_with_compile --preproc_dependency="Sine8_LED.d"  "../Sine8_LED.c"
+"../Sine8_LED.c", line 45: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 47: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 48: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 56: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 58: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 61: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 68: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 78: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 80: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 81: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 87: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 89: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 93: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 102: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 106: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 114: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 127: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 129: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 130: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 148: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 150: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 151: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 154: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 162: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 173: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 188: warning #225-D: function declared implicitly
+"../Sine8_LED.c", line 208: warning #225-D: function declared implicitly
+'Finished building: ../Sine8_LED.c'
+' '
+'Building target: lab_2.out'
+'Invoking: C6000 Linker'
+"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far -z -m"lab_2.map" --stack_size="0x400" --heap_size="0x400" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/lib/lib_3x" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/lib/dsk6416bsl" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="lab_2_linkInfo.xml" --rom_model -o "lab_2.out" "./Sine8_LED.obj" "./c6416dskinit.obj"  -llibc.a -l"D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib" -l"D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib" 
+<Linking>
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib<csl_irq.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib<csl_mcbsp.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416_aic23_opencodec.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416_aic23_registers.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416_aic23_setfreq.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416_dip.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/dsk6416bsl.lib<dsk6416_led.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib<csl_emifa.obj>": compatibility cannot be determined
+warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib<csl_emifb.obj>": compatibility cannot be determined
+'Finished building target: lab_2.out'
+' '
+
+**** Build Finished ****

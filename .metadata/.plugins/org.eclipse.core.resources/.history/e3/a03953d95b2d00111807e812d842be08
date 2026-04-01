@@ -1,0 +1,64 @@
+// Sine8_LED.c  Sine generation with DIP switch control
+#include "dsk6416_aic23.h"           //support file for codec,DSK
+Uint32 fs = DSK6416_AIC23_FREQ_8KHZ; // set sampling rate
+short loop = 0;
+short loop1 = 0;
+short i = 0;
+short j = 0;
+short m = 0;                                                     // table index
+short gain = 1;                                                  // gain factor
+short sine_table[8] = {0, 707, 1000, 707, 0, -707, -1000, -707}; // sine values
+short sine_table1[4] = {0, 1000, 0, -1000};
+#define BUFFSIZE 128
+
+// Global Variables
+short gBuffer[BUFFSIZE];
+short aaa[BUFFSIZE];
+short gBuffer1[BUFFSIZE];
+void main()
+{
+  // comm_poll();               		//init DSK,codec,McBSP
+  c6416_dsk_init();
+  DSK6416_LED_init(); // init LED from BSL
+  DSK6416_DIP_init(); // init DIP from BSL
+
+  while (1) // infinite loop
+  {
+    for (i = 0; i < BUFFSIZE; i++)
+    {
+      if (DSK6416_DIP_get(0) == 0) //=0 if DIP switch #0 pressed
+      {
+        DSK6416_LED_on(0); // turn LED #0 ON
+        for (loop = 0; loop <= 7; loop++)
+        {
+          output_left_sample(sine_table[loop] * gain); // output sine values
+          gBuffer[i + loop] = (sine_table[loop] * gain);
+        }
+        if (loop == 8)
+          i = i + loop - 1, loop = 0; // check for end of table
+      }
+      else
+        DSK6416_LED_off(0);
+    }
+    for (j = 0; j < BUFFSIZE; j++)
+
+    {
+      if (DSK6416_DIP_get(1) == 0)
+      {
+        for (loop1 = 0; loop1 <= 3; loop1++)
+        {
+          output_right_sample(sine_table1[loop1] * gain); // output sine values
+          gBuffer1[j + loop1] = (sine_table1[loop1] * gain);
+        }
+        if (loop1 == 4)
+          j = j + loop1 - 1, loop1 = 0; // check for end of table
+      }
+      else
+        DSK6416_LED_off(1);
+    }
+    for (m = 0; m < BUFFSIZE; m++)
+    {
+      aaa[m] = gBuffer1[m] + gBuffer[m];
+    }
+  }
+}
