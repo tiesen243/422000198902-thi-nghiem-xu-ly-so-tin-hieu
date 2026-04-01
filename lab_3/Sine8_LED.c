@@ -3,7 +3,7 @@
 
 #define BUFFSIZE 128
 
-Uint32 fs = DSK6416_AIC23_FREQ_8KHZ; // set sampling rate, replace with 16, 32, 44, 48
+Uint32 _fs = DSK6416_AIC23_FREQ_8KHZ; // set sampling rate, replace with 16, 32, 44, 48
 
 short loop = 0, loop1 = 0;
 short i = 0, j = 0, m = 0; // table index

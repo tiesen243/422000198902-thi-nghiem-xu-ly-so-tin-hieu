@@ -1,7 +1,11 @@
 
-**** Build of configuration Debug for project lab_1 ****
+**** Clean-only build of configuration Debug for project lab_1 ****
 
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'lab_1.out' is up to date.
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 clean -O 
+DEL /F  "lab_1.hex"  "lab_1.out" 
+DEL /F "block_sine.obj" "c6416dskinit.obj" "lab1.obj" 
+DEL /F "block_sine.d" "c6416dskinit.d" "lab1.d" 
+'Finished clean'
+' '
 
 **** Build Finished ****

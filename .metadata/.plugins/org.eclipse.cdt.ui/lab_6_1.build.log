@@ -1,7 +1,13 @@
 
-**** Build of configuration Debug for project lab_6_1 ****
+**** Clean-only build of configuration Debug for project lab_6_1 ****
 
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'lab_6_1.out' is up to date.
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 clean -O 
+DEL /F  "lab_6_1.hex"  "lab_6_1.out" 
+DEL /F "IIR.obj" "Vectors_intr.obj" "c6416dskinit.obj" 
+DEL /F "IIR.d" "c6416dskinit.d" 
+DEL /F "Vectors_intr.d" 
+Could Not Find C:\Users\tiesen\Documents\ccs\lab_6_1\Debug\Vectors_intr.d
+'Finished clean'
+' '
 
 **** Build Finished ****

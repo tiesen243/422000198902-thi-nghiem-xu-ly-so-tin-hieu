@@ -1,0 +1,39 @@
+# Code Composer Studio - generated build output
+Debug/
+Release/
+
+# Dependency and auto-generated make files
+*.d
+*.mk
+subdir_rules.mk
+subdir_vars.mk
+sources.mk
+objects.mk
+makefile
+
+# Compiler/linker artifacts
+*.obj
+*.out
+*.map
+*.lst
+*.pp
+*.ppl
+*.opt
+*.asm
+*.sr
+*.su
+
+# CCS generated debug/session metadata
+*.dat
+*.xml
+*.log
+*.tmp
+
+# Launch and local workspace settings
+.launches/
+.settings/
+
+# Keep project descriptors in git
+!.project
+!.cproject
+!.ccsproject

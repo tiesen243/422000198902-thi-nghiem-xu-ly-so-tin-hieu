@@ -1,7 +1,11 @@
 
-**** Build of configuration Debug for project hello ****
+**** Clean-only build of configuration Debug for project hello ****
 
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'hello.out' is up to date.
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 clean -O 
+DEL /F  "hello.hex"  "hello.out" 
+DEL /F "c6416dskinit.obj" "main.obj" 
+DEL /F "c6416dskinit.d" "main.d" 
+'Finished clean'
+' '
 
 **** Build Finished ****
