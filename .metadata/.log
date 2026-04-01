@@ -2790,3 +2790,15 @@ Caused by: java.lang.IllegalArgumentException:
 !ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:59:06.153
 !MESSAGE DS_ERROR: C64xx_0: Power Failure on Target CPU 
 
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 09:13:33.435
+!MESSAGE DS_ERROR: C64xx_0: Error initializing emulator 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 09:13:33.562
+!MESSAGE DS_ERROR: Error initializing emulator
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 09:18:19.787
+!MESSAGE DS_ERROR: C64xx_0: Power Failure on Target CPU 
+

@@ -10,6 +10,7 @@ Uint32 fs = DSK6416_AIC23_FREQ_48KHZ;
 short sine_table[8] = {0, 707, 1000, 707, 0, -707, -1000, -707};
 short gBuffer[BUFFSIZE];
 short z = 0;
+int X;
 
 const float w3k = (2.0f * (float)PI * 3000.0f) / 48000.0f;
 const float w6k = (2.0f * (float)PI * 6000.0f) / 48000.0f;
@@ -94,7 +95,7 @@ void main()
     }
     */
 
-    /* Bai 2 */
+    /* Bai 2
     while (1)
     {
         if (DSK6416_DIP_get(0) == 0)
@@ -201,7 +202,5 @@ void main()
             output_left_sample(0);
         }
     }
-
-    /* Bai 3 Amplifier */
-    int X = input_sample();
+    */
 }
