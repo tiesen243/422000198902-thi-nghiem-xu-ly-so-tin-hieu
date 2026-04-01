@@ -1,14 +1,7 @@
 
-**** Clean-only build of configuration Debug for project lab_3 ****
+**** Build of configuration Debug for project lab_3 ****
 
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 clean -O 
-DEL /F  "lab_3.hex"  "lab_3.out" 
-DEL /F "Sine8_LED.obj" "bai_tap.obj" "c6416dskinit.obj" 
-DEL /F "Sine8_LED.d" "bai_tap.d" "c6416dskinit.d" 
-Could Not Find C:\Users\tiesen\Documents\ccs\lab_3\Debug\lab_3.hex
-Could Not Find C:\Users\tiesen\Documents\ccs\lab_3\Debug\Sine8_LED.obj
-Could Not Find C:\Users\tiesen\Documents\ccs\lab_3\Debug\Sine8_LED.d
-'Finished clean'
-' '
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
+gmake[1]: 'lab_3.out' is up to date.
 
 **** Build Finished ****

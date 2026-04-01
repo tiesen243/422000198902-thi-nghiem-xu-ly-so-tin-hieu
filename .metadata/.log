@@ -2766,3 +2766,27 @@ Caused by: java.lang.IllegalArgumentException:
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2026-04-01 08:00:41.639
 !MESSAGE The project description file (.project) for 'RemoteSystemsTempFiles' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:44:28.831
+!MESSAGE DS_ERROR: C64xx_0: Error initializing emulator 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:44:28.958
+!MESSAGE DS_ERROR: Error initializing emulator
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:46:21.666
+!MESSAGE DS_ERROR: C64xx_0: Power Failure on Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:56:11.745
+!MESSAGE DS_ERROR: C64xx_0: Error initializing emulator 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:56:11.892
+!MESSAGE DS_ERROR: Error initializing emulator
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2026-04-01 08:59:06.153
+!MESSAGE DS_ERROR: C64xx_0: Power Failure on Target CPU 
+
