@@ -2,20 +2,6 @@
 **** Build of configuration Debug for project lab_6_2 ****
 
 "C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'lab_6_2.out' is up to date.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab_6_2 ****
-
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'lab_6_2.out' is up to date.
-
-**** Build Finished ****
-
-**** Build of configuration Debug for project lab_6_2 ****
-
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
 'Building file: ../Fir_block.c'
 'Invoking: C6000 Compiler'
 "C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far --preproc_with_compile --preproc_dependency="Fir_block.d"  "../Fir_block.c"
@@ -44,5 +30,12 @@ warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_U
 warning #16002-D: build attribute vendor section TI missing in "D:/linh-tinh/1_USB_total/2_ThuvienDSP/lib/csl6416.lib<csl_emifb.obj>": compatibility cannot be determined
 'Finished building target: lab_6_2.out'
 ' '
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lab_6_2 ****
+
+"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
+gmake[1]: 'lab_6_2.out' is up to date.
 
 **** Build Finished ****
