@@ -1,15 +1,21 @@
 clear all;
 close all;
 
-recorder = audiorecorder(44100, 16, 1);
-disp('Start speaking.');
+inputFile = 'music.mp3';
+info = audioinfo(inputFile);
+numSamples = min(round(2 * info.SampleRate), info.TotalSamples);
+[audioarray, fs] = audioread(inputFile, [1, numSamples]);
 
-recordblocking(recorder, 2);
-audioarray = getaudiodata(recorder);
-disp('Recording finished.');
+if size(audioarray, 2) > 1
+    audioarray = mean(audioarray, 2);
+end
 
-b_short = int16(audioarray * 1000);
-l = length(audioarray);
+disp(['Loaded first 2 seconds from ', inputFile, ' at ', num2str(fs), ' Hz.']);
+
+b_short = int16(max(min(audioarray, 1), -1) * 32767);
+b_short = b_short(b_short ~= 0);
+
+l = length(b_short);
 
 fid = fopen('audiorecord.h', 'w');
 fprintf(fid, '#ifndef AUDIORECORD_H\n');

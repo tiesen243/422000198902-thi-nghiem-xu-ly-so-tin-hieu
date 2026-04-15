@@ -1,14 +1,14 @@
 #include "lp1500_256.cof"
 #include "dsk6416_aic23.h"
 
-#include "record.h"
+#include "audiorecord.h"
 
 #define INPUT_LEN SPEECHBUF
 #define OUTPUT_LEN INPUT_LEN
 
 Uint32 fs = DSK6416_AIC23_FREQ_44KHZ;
 int yn = 0;
-int gain = 1;
+int gain = 30;
 short dly[N];
 int temp = 0;
 
