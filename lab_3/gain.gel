@@ -4,7 +4,7 @@ menuitem "Sine Gain"
 
 slider Gain(1,35,5,1,gain_parameter) /*incr by 5,up to 35*/
 {
-        gain = gain_parameter;        /*vary gain of sine*/
+        _gain = gain_parameter;        /*vary gain of sine*/
 }
 
                              

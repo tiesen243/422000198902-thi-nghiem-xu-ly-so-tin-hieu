@@ -1,53 +1,53 @@
-//Fir.c  FIR filter with the C6416 DSK. Include coefficient file 
-#include "lp1500_256.cof"		   		//coefficient file
-//#include"bp_3000_kaiser.h"
-#include "dsk6416_aic23.h"				//codec-dsk support file
-#include "Speech.h"
-//#include "testhead.h"
-Uint32 fs=DSK6416_AIC23_FREQ_44KHZ;	//set sampling rate
-int yn = 0;
-int gain=1;//initialize filter's output
-short dly[N];  
-             	//delay samples
-int temp=0;
+#include "lp1500_256.cof"
+#include "dsk6416_aic23.h"
+
+#include "record.h"
+
 #define INPUT_LEN SPEECHBUF
 #define OUTPUT_LEN INPUT_LEN
+
+Uint32 fs = DSK6416_AIC23_FREQ_44KHZ;
+int yn = 0;
+int gain = 1;
+short dly[N];
+int temp = 0;
+
 short y[OUTPUT_LEN];
+
 void main()
 {
+	int i, n;
+	comm_poll();
+	DSK6416_LED_init();
 
-  	//while(1);
+	for (n = 0; n < OUTPUT_LEN; n++)
+	{
+		short i;
 
-  	  int i,n;
-  	  comm_poll(); //init dsk6416 board and DAC,ADC
-  	  DSK6416_LED_init(); //LEDs init
-  	  /*fir filter with block processing   	  */
-  	  for(n=0;n<OUTPUT_LEN;n++)  //y(n)=x(n)*h(n)
-  	  {
-  	    short i;
-  	     dly[0]=Speech[n];                 //input newest sample
-  	     yn = 0;                            //initialize filter's output
-  	     for (i = 0; i< N; i++)
-  	        yn += (h[i] * dly[i]);              //y(n) += h(i)* x(n-i)
-  	     for (i = N-1; i > 0; i--)              //starting @ end of buffer
-  	       dly[i] = dly[i-1];               //update delays with data move
-  	     output_sample((short)(yn>>15)*gain);        //scale output filter sample
-  	     y[n]=((short)(yn>>15));
+		dly[0] = Speech[n];
+		yn = 0;
 
-  	  }
-  	  //Output to headphone
-  	  while(1)
-  	  {
-  	    if(DSK6416_DIP_get(0)==0)
-  	    {
-          for(n=0;n<SPEECHBUF;n++)
-          output_sample(Speech[n]); //Original Voice
-  	    }
-  	  if(DSK6416_DIP_get(1)==0)
-          {
-          for(n=0;n<SPEECHBUF;n++)
-          output_sample(y[n]); //Filtered Voice
-          }
-  	  }
+		for (i = 0; i < N; i++)
+			yn += (h[i] * dly[i]);
+		for (i = N - 1; i > 0; i--)
+			dly[i] = dly[i - 1];
+
+		output_sample((short)(yn >> 15) * gain);
+		y[n] = ((short)(yn >> 15));
+	}
+
+	while (1)
+	{
+		if (DSK6416_DIP_get(0) == 0)
+		{
+			for (n = 0; n < SPEECHBUF; n++)
+				output_sample(Speech[n]);
+		}
+
+		if (DSK6416_DIP_get(1) == 0)
+		{
+			for (n = 0; n < SPEECHBUF; n++)
+				output_sample(y[n]);
+		}
+	}
 }
-

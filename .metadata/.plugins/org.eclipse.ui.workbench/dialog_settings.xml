@@ -20,4 +20,9 @@
 		<item value="SDDSKUSB" key="com.ti.ccstudio.system.setup.ui.editors.connectionType"/>
 		<item value="Spectrum Digital DSK-EVM-eZdsp onboard USB Emulator" key="com.ti.ccstudio.system.setup.ui.editors.connectionName"/>
 	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="GelLoadDialog">
+		<item value="C:\Users\tiesen\Documents\ccs\lab_3" key="filterPath"/>
+	</section>
 </section>
