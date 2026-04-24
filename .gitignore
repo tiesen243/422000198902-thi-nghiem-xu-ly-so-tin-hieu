@@ -35,3 +35,8 @@ build/
 # ===== OS junk =====
 .DS_Store
 Thumbs.db
+
+# ===== Misc =====
+.launches/
+.vscode/
+*.bak
