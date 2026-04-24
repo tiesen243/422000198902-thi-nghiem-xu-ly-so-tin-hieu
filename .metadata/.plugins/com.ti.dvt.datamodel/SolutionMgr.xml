@@ -14,10 +14,16 @@
  <void id="ArrayList0" method="get">
   <object idref="SolutionManager$PersistState0"/>
   <void method="add">
-   <string>C:\Users\tiesen\Documents\ccs\dvt\AnalysisSolutionsTemp\AnalysisSolution1775605360586\null</string>
+   <string>C:\Users\tiesen\Documents\ccs\dvt\AnalysisSolutionsTemp\AnalysisSolution1776814682005\null</string>
   </void>
   <void method="add">
    <string>C:\Program Files\TI\ccsv7\ccs_base\dvt_4.1.0.201612061750\CCSgraphs\solutions\SingleTime\singletime</string>
+  </void>
+  <void method="add">
+   <string>C:\Program Files\TI\ccsv7\ccs_base\dvt_4.1.0.201612061750\CCSgraphs\solutions\SingleTime\singletime</string>
+  </void>
+  <void method="add">
+   <string>C:\Program Files\TI\ccsv7\ccs_base\dvt_4.1.0.201612061750\CCSgraphs\solutions\FFTMagnitude\fftMagnitude</string>
   </void>
   <void method="add">
    <string>C:\Program Files\TI\ccsv7\ccs_base\dvt_4.1.0.201612061750\CCSgraphs\solutions\FFTMagnitude\fftMagnitude</string>

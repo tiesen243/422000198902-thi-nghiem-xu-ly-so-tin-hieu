@@ -142,7 +142,7 @@ all: $(OBJS) $(GEN_CMDS)
 hello.out: $(OBJS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: C6000 Linker'
-	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --define=CHIP_6416 --diag_wrap=off --display_error_number --diag_warning=225 --mem_model:data=far -z -m"hello.map" --stack_size="0x400" --heap_size="0x400" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/lib/lib_3x" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/lib/dsk6416bsl" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="hello_linkInfo.xml" --rom_model -o "hello.out" $(ORDERED_OBJS)
+	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far -z -m"hello.map" --stack_size="0x400" --heap_size="0x400" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/lib" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/lib/lib_3x" -i"D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/lib/dsk6416bsl" -i"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="hello_linkInfo.xml" --rom_model -o "hello.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

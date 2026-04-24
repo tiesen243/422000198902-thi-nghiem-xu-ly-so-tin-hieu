@@ -1,0 +1,3 @@
+tạo tín hiệu 2 tone (bài 9), bỏ 1 tone
+thiết kế lọc (bài 10)
+xuất tín hiệu, trc và sau lọc (bài 11)

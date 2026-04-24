@@ -1,39 +1,37 @@
-# Code Composer Studio - generated build output
+# ===== Build folders =====
 Debug/
 Release/
+target/
+build/
 
-# Dependency and auto-generated make files
-*.d
-*.mk
-subdir_rules.mk
-subdir_vars.mk
-sources.mk
-objects.mk
-makefile
+# ===== CCS specific =====
+.settings/
+.metadata/
+*.ccsproject
+*.project
+*.cproject
 
-# Compiler/linker artifacts
-*.obj
+# ===== Generated files =====
 *.out
-*.map
-*.lst
+*.obj
+*.o
+*.d
 *.pp
-*.ppl
-*.opt
-*.asm
-*.sr
-*.su
+*.map
 
-# CCS generated debug/session metadata
-*.dat
-*.xml
+# ===== Temporary files =====
 *.log
 *.tmp
 
-# Launch and local workspace settings
-.launches/
-.settings/
+# ===== DSP/BIOS or SYS/BIOS =====
+*.cfg
+*.cfg.mak
+*.cfg.cmd
 
-# Keep project descriptors in git
-!.project
-!.cproject
-!.ccsproject
+# ===== Linker & compiler outputs =====
+*.lst
+*.asm
+
+# ===== OS junk =====
+.DS_Store
+Thumbs.db

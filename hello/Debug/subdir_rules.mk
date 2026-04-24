@@ -8,14 +8,14 @@ SHELL = cmd.exe
 c6416dskinit.obj: ../c6416dskinit.c $(GEN_OPTS) | $(GEN_HDRS)
 	@echo 'Building file: $<'
 	@echo 'Invoking: C6000 Compiler'
-	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_wrap=off --display_error_number --diag_warning=225 --mem_model:data=far --preproc_with_compile --preproc_dependency="c6416dskinit.d" $(GEN_OPTS__FLAG) "$<"
+	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far --preproc_with_compile --preproc_dependency="c6416dskinit.d" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 main.obj: ../main.c $(GEN_OPTS) | $(GEN_HDRS)
 	@echo 'Building file: $<'
 	@echo 'Invoking: C6000 Compiler'
-	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_wrap=off --display_error_number --diag_warning=225 --mem_model:data=far --preproc_with_compile --preproc_dependency="main.d" $(GEN_OPTS__FLAG) "$<"
+	"C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/bin/cl6x" -mv6400 --abi=coffabi -g --include_path="C:/Program Files/TI/ccsv7/tools/compiler/ti-cgt-c6000_7.4.20/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/BIOS/include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/CSL/Include" --include_path="D:/linh-tinh/1_USB_total/2_ThuvienDSP/DSK6416/Include" --define=CHIP_6416 --diag_warning=225 --diag_wrap=off --display_error_number --mem_model:data=far --preproc_with_compile --preproc_dependency="main.d" $(GEN_OPTS__FLAG) "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -1,7 +1,7 @@
 clear all;
 close all;
 
-filename = 'music.mp3';
+filename = '1khz.mp3';
 Fs_target = 16000;
 duration_sec = 2;
 

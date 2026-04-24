@@ -1,7 +1,7 @@
 #include "lp1500_256.cof"
 #include "dsk6416_aic23.h"
 
-#include "extract_2.h"
+#include "extract_3.h"
 
 #define INPUT_LEN SPEECHBUF
 #define OUTPUT_LEN INPUT_LEN
