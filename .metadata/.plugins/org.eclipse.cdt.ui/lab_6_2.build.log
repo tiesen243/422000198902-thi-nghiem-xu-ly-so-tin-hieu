@@ -1,7 +1,0 @@
-
-**** Build of configuration Debug for project lab_6_2 ****
-
-"C:\\Program Files\\TI\\ccsv7\\utils\\bin\\gmake" -k -j 16 all -O 
-gmake[1]: 'lab_6_2.out' is up to date.
-
-**** Build Finished ****

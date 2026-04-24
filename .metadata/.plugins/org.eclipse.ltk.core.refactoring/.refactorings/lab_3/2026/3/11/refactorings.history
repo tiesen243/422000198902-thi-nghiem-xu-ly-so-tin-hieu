@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;lab_3/Sine8_LED.txt&apos; to &apos;Sine8_LED.c&apos;" description="Rename resource &apos;Sine8_LED.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Sine8_LED.txt" name="Sine8_LED.c" stamp="1773195151182" updateReferences="true"/>
-</session>
